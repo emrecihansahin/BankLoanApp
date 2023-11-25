@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
+    <Folder Include="Concrete\**\*.cs" />
     <Folder Include="Abstract\" />
   </ItemGroup>
 
