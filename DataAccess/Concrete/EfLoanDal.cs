@@ -26,7 +26,7 @@ namespace DataAccess.Concrete
             throw new NotImplementedException();
         }
 
-        public BaseLoan GetT(Expression<Func<BaseLoan, bool>> filter)
+        public BaseLoan Get(Expression<Func<BaseLoan, bool>> filter)
         {
             throw new NotImplementedException();
         }
