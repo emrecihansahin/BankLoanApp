@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ILoanDal : IEntityRepositoryDal<BaseLoan>
+    public interface ILoanDal : IEntityRepository<BaseLoan>
     {
     }
 }

@@ -1,39 +1,12 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    public class EfLoanDal : ILoanDal
-    {
-        public void Add(BaseLoan entity)
-        {
-            throw new NotImplementedException();
-        }
+    public class EfLoanDal : EfEntityRepository<BaseLoan, NorthwindContext>, ILoanDal
+    { 
 
-        public void Delete(BaseLoan entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<BaseLoan> GetAll(Expression<Func<BaseLoan, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public BaseLoan Get(Expression<Func<BaseLoan, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(BaseLoan entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
