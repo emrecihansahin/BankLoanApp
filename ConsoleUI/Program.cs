@@ -2,9 +2,26 @@
 using Business.Concrete;
 using DataAccess.Concrete;
 
-CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+//CustomerTest();
+LoanTest();
 
-foreach (var customer in customerManager.GetAll())
+static void CustomerTest()
 {
-    Console.WriteLine(customer.Name);
+    CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+
+    foreach (var customer in customerManager.GetAll())
+    {
+        Console.WriteLine(customer.Name);
+    }
 }
+
+static void LoanTest()
+{
+    LoanManager loanManager = new LoanManager(new EfLoanDal());
+
+    foreach (var loan in loanManager.GetLoanDetails())
+    {
+        Console.WriteLine(loan.LoanName + " --- " + loan.NationalId);
+    }
+}
+

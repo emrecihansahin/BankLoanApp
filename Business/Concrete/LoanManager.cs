@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace Business.Concrete
         public List<BaseLoan> GetByCustomerId(int customerId)
         {
             return _loanDal.GetAll(l => l.CustomerId == customerId);
+        }
+
+        public List<LoanDetailDto> GetLoanDetails()
+        {
+            return _loanDal.GetLoanDetails();
         }
     }
 }
