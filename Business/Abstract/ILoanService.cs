@@ -13,5 +13,7 @@ namespace Business.Abstract
         List<BaseLoan> GetAll();
         List<BaseLoan> GetByCustomerId(int customerId);
         List<LoanDetailDto> GetLoanDetails();
+        void Add(BaseLoan loan);
+        BaseLoan GetLoanById(int loanId);
     }
 }

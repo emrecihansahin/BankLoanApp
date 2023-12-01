@@ -2,16 +2,18 @@
 using Business.Concrete;
 using DataAccess.Concrete;
 
-//CustomerTest();
-LoanTest();
+CustomerTest();
+//LoanTest();
 
 static void CustomerTest()
 {
     CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
 
-    foreach (var customer in customerManager.GetAll())
+    var result = customerManager.GetAll();
+
+    foreach (var customer in result.Data)
     {
-        Console.WriteLine(customer.Name);
+        Console.WriteLine(customer.Name + " " + customer.Surname);
     }
 }
 

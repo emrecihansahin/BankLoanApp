@@ -19,6 +19,11 @@ namespace Business.Concrete
             _loanDal = loanDal;
         }
 
+        public void Add(BaseLoan loan)
+        {
+            _loanDal.Add(loan);
+        }
+
         public List<BaseLoan> GetAll()
         {
             return _loanDal.GetAll();
@@ -27,6 +32,11 @@ namespace Business.Concrete
         public List<BaseLoan> GetByCustomerId(int customerId)
         {
             return _loanDal.GetAll(l => l.CustomerId == customerId);
+        }
+
+        public BaseLoan GetLoanById(int loanId)
+        {
+            return _loanDal.Get(l => l.LoanId == loanId);
         }
 
         public List<LoanDetailDto> GetLoanDetails()
